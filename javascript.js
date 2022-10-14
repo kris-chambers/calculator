@@ -15,6 +15,7 @@ const multiply = document.querySelector('#multipy');
 const divide = document.querySelector('#divide');
 const equal = document.querySelector('#equal');
 const clear = document.querySelector('#clear');
+const input = document.querySelector('#input');
 
 function addition(a, b) {
   return a + b;
@@ -42,4 +43,9 @@ function operate(operator, a, b) {
   } else if (operator === "/") {
     division(a, b);
   }
+};
+
+one.addEventListener('click', () => {
+  const input = document.querySelector('#input');
+  input.value += 1;
 };

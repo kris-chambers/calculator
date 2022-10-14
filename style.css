@@ -23,6 +23,8 @@
   height: 100px;
   width: 481px;
   background-color: #273746;
+  font-size: 30px;
+  color: white;
   border: 1px solid #EAECEE;  
 }
 
@@ -55,6 +57,12 @@
   transition: 0.5s;
 }
 
+.number:active {
+  background-color: hsl(214 9% 85%);
+  transition: 0.2s;
+  transform: scale(0.98);
+}
+
 .operator {
   background-color: hsl(39 100% 50%);
 }
@@ -62,6 +70,12 @@
 .operator:hover {
   background-color: hsl(39 100% 40%);
   transition: 0.5s;
+}
+
+.operator:active {
+  background-color: hsl(39 100% 50%);
+  transition: 0.2s;
+  transform: scale(0.98);
 }
 
 .clearbtn {
@@ -73,6 +87,11 @@
   transition: 0.5s;
 }
 
+.clearbtn:active {
+  background-color: hsl(0 100% 50%);
+  transition: 0.2s;
+  transform: scale(0.98);
+
 .equalbtn {
   background-color: hsl(147 50% 47%);
 }
@@ -81,3 +100,8 @@
   background-color: hsl(147 50% 37%);
   transition: 0.5s;
 }
+
+.equalbtn:active {
+  background-color: hsl(147 50% 47%);
+  transition: 0.2s;
+  transform: scale(0.98);
