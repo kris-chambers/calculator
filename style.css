@@ -1,0 +1,40 @@
+.calculator {
+  height: 625px;
+  width: 500px;
+  border: 1px black solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3px;
+}
+
+.name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+.screen {
+  height: 100px;
+  width: 500px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3px;
+}
+
+.row2 {
+  justify-content: space-between;  
+}
+
+.button {
+  width: 120px;
+  height: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
