@@ -21,8 +21,9 @@
 
 .screen {
   height: 100px;
-  width: 490px;
-  background-color: #EAECEE;
+  width: 481px;
+  background-color: #273746;
+  border: 1px solid #EAECEE;  
 }
 
 .row {
@@ -42,12 +43,41 @@
   height: 100px;
   color: #2C3E50;
   border-radius: 4px;
-  background-color: #D5D8DC;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.button:hover {
-  background-color: #808B96;
+.number {
+  background-color: hsl(214 9% 85%);
+}
+.number:hover {
+  background-color: hsl(214 9% 75%);
+  transition: 0.5s;
+}
+
+.operator {
+  background-color: hsl(39 100% 50%);
+}
+
+.operator:hover {
+  background-color: hsl(39 100% 40%);
+  transition: 0.5s;
+}
+
+.clearbtn {
+  background-color: hsl(0 100% 50%);
+}
+
+.clearbtn:hover {
+  background-color: hsl(0 100% 40%);
+  transition: 0.5s;
+}
+
+.equalbtn {
+  background-color: hsl(147 50% 47%);
+}
+
+.equalbtn:hover {
+  background-color: hsl(147 50% 37%);
   transition: 0.5s;
 }
