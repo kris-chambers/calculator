@@ -23,7 +23,7 @@ const zero = document.querySelector('#zero');
 const decimal = document.querySelector('#decimal');
 const plus = document.querySelector('#plus');
 const minus = document.querySelector('#minus');
-const multiply = document.querySelector('#multipy');
+const times = document.querySelector('#times');
 const divide = document.querySelector('#divide');
 const equal = document.querySelector('#equal');
 const clear = document.querySelector('#clear');
@@ -60,41 +60,85 @@ function operate(operator, a, b) {
 };
 
 // Event listeners for number buttons
-one.addEventListener('click', () => {
+function numberButtons(num) {
   if (!usedOperator) {
-    firstNumber.push(1);
-    equationArray.push(1);
+    firstNumber.push(num);
+    equationArray.push(num);
     displayA(firstNumber);
     displayEquation(equationArray);
     input.setAttribute("value", equation);
   } else if (usedOperator) {
-    secondNumber.push(1);
-    equationArray.push(1);
+    secondNumber.push(num);
+    equationArray.push(num);
     displayB(secondNumber);
     displayEquation(equationArray);
     input.setAttribute("value", equation);
   }
+}
+
+one.addEventListener('click', () => {
+  numberButtons(1);
 });
 
 two.addEventListener('click', () => {
-  if (!usedOperator) {
-    firstNumber.push(2);
-    displayA(firstNumber);
-    input.setAttribute("value", a);
-  } else if (usedOperator) {
-    secondNumber.push(2);
-    displayB(secondNumber);
-    input.setAttribute("value", b);
-  }
+  numberButtons(2);
+});
+
+three.addEventListener('click', () => {
+  numberButtons(3);
+});
+
+four.addEventListener('click', () => {
+  numberButtons(4);
+});
+
+five.addEventListener('click', () => {
+  numberButtons(5);
+});
+
+six.addEventListener('click', () => {
+  numberButtons(6);
+});
+
+seven.addEventListener('click', () => {
+  numberButtons(7);
+});
+
+eight.addEventListener('click', () => {
+  numberButtons(8);
+});
+
+nine.addEventListener('click', () => {
+  numberButtons(9);
+});
+
+zero.addEventListener('click', () => {
+  numberButtons(0);
 });
 
 // Event listeners for operator buttons
-plus.addEventListener('click', () => {
+function operatorButton(oper) {
   usedOperator = true;
-  operator = "+";
-  equationArray.push("+");
+  operator = oper;
+  equationArray.push(oper);
   displayEquation(equationArray);
   input.setAttribute("value", equation);
+}
+
+plus.addEventListener('click', () => {
+  operatorButton("+");
+});
+
+minus.addEventListener('click', () => {
+  operatorButton("-");
+});
+
+times.addEventListener('click', () => {
+  operatorButton("*");
+});
+
+divide.addEventListener('click', () => {
+  operatorButton("/");
 });
 
 // Event listener for equal button
