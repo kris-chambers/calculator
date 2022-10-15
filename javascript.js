@@ -116,6 +116,10 @@ zero.addEventListener('click', () => {
   numberButtons(0);
 });
 
+decimal.addEventListener('click', () => {
+  numberButtons(".");
+})
+
 // Event listeners for operator buttons
 function operatorButton(oper) {
   usedOperator = true;
