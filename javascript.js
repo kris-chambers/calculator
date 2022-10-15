@@ -43,7 +43,7 @@ function multiplication(a, b) {
 };
 
 function division(a, b) {
-  answer = a / b;
+    answer = a / b;
 };
 
 // Function that combines operator functions
@@ -144,20 +144,50 @@ divide.addEventListener('click', () => {
 // Event listener for equal button
 equal.addEventListener('click', () => {
   if (usedOperator) {
-    operate(operator, a, b);
-    equationArray.push("=");
-    equationArray.push(answer);
-    displayEquation(equationArray);
-    input.setAttribute("value", equation);
-    firstNumber[0] = answer;
-    secondNumber = [];
-    a = answer;
-    b = "";
-    operator = "";
-    equationArray = [];
-    equationArray[0] = answer;
-    equation = answer;
-    usedOperator = false;
+    if (operator === "/") {
+      if (b === 0) {
+        input.setAttribute("value", "Really??");
+        firstNumber = [];
+        secondNumber = [];
+        a = "";
+        b = "";
+        answer = "";
+        operator = "";
+        usedOperator = false;
+        equationArray = [];
+        equation = "";
+      } else {
+        operate(operator, a, b);
+        equationArray.push("=");
+        equationArray.push(answer);
+        displayEquation(equationArray);
+        input.setAttribute("value", equation);
+        firstNumber[0] = answer;
+        secondNumber = [];
+        a = answer;
+        b = "";
+        operator = "";
+        equationArray = [];
+        equationArray[0] = answer;
+        equation = answer;
+        usedOperator = false;
+      }
+    } else {
+      operate(operator, a, b);
+      equationArray.push("=");
+      equationArray.push(answer);
+      displayEquation(equationArray);
+      input.setAttribute("value", equation);
+      firstNumber[0] = answer;
+      secondNumber = [];
+      a = answer;
+      b = "";
+      operator = "";
+      equationArray = [];
+      equationArray[0] = answer;
+      equation = answer;
+      usedOperator = false;
+    }
   }
 })
 
