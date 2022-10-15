@@ -1,4 +1,8 @@
-const one = document.querySelector('#one');
+let firstNumber = [];
+let a = "";
+
+
+const one = document.getElementById('one');
 const two = document.querySelector('#two');
 const three = document.querySelector('#three');
 const four = document.querySelector('#four');
@@ -46,6 +50,13 @@ function operate(operator, a, b) {
 };
 
 one.addEventListener('click', () => {
-  const input = document.querySelector('#input');
-  input.value += 1;
-};
+  firstNumber.push(1);
+  displayA(firstNumber);
+  input.setAttribute("value", a);
+});
+
+function displayA(array) {
+  for (let i = 0; i < array.length; i++) {
+    a = parseInt(array.join(""));
+  }
+}
