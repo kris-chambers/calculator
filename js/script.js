@@ -1,6 +1,7 @@
 let aNum = 0;
 let operator = "";
 let bNum = 0;
+let result = 0;
 
 function add(a, b) {
   return a + b;
@@ -95,3 +96,24 @@ button1.addEventListener("click", () => {
 button0.addEventListener("click", () => {
   addToDisplay(0);
 });
+
+clearButton.addEventListener("click", () => {
+  aNum = 0;
+  bNum = 0;
+  operator = "";
+  result = "";
+  display.textContent = result;
+})
+
+addButton.addEventListener("click", () => {
+  aNum = Number(display.textContent);
+  display.textContent = "";
+  operator = "+";
+});
+
+equalButton.addEventListener("click", () => {
+  bNum = Number(display.textContent);
+  let result = Number(operate(aNum, operator, bNum));
+  display.textContent = result;
+  aNum = result;
+})
