@@ -45,12 +45,12 @@ const button0 = document.querySelector("#button0");
 
 const numButtons = document.querySelectorAll(".number-button");
 
-const clearButton = document.querySelector("clear-button");
-const divideButton = document.querySelector("divide-button");
-const multiplyButton = document.querySelector("multiply-button");
-const subtractButton = document.querySelector("subtract-button");
-const addButton = document.querySelector("add-button");
-const equalButton = document.querySelector("equal-button");
+const clearButton = document.querySelector("#clear-button");
+const divideButton = document.querySelector("#divide-button");
+const multiplyButton = document.querySelector("#multiply-button");
+const subtractButton = document.querySelector("#subtract-button");
+const addButton = document.querySelector("#add-button");
+const equalButton = document.querySelector("#equal-button");
 
 function addToDisplay(num) {
   display.textContent += num;
