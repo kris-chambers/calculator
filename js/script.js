@@ -117,3 +117,21 @@ equalButton.addEventListener("click", () => {
   display.textContent = result;
   aNum = result;
 })
+
+subtractButton.addEventListener("click", () => {
+  aNum = Number(display.textContent);
+  display.textContent = "";
+  operator = "-";
+});
+
+multiplyButton.addEventListener("click", () => {
+  aNum = Number(display.textContent);
+  display.textContent = "";
+  operator = "*";
+});
+
+divideButton.addEventListener("click", () => {
+  aNum = Number(display.textContent);
+  display.textContent = "";
+  operator = "/";
+});
